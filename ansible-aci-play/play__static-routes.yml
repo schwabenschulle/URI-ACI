@@ -1,0 +1,36 @@
+---
+- name: Configure static route in ACI
+  hosts: localhost
+  gather_facts: false
+
+  vars_prompt:
+    - name: username
+      prompt: "What is your username?"
+      private: no
+
+    - name: password
+      prompt: "What is your password?"
+
+  tasks:
+    - name: login
+      include_role:
+        name: login_to_aci
+      vars:
+        apic_ip: "{{ item.ip }}"
+      loop: "{{ apic_hosts_ip }}"
+
+    - name: debug
+      debug:
+        var: fabric_array
+
+    - name: add routes in aci
+      include_role:
+        name: role__static-routes-aci
+      vars:
+        apic_ip: "{{ item.ip }}"
+        apic_cookie: "{{ item.cookie }}"
+      loop: "{{ fabric_array }}"
+
+
+
+

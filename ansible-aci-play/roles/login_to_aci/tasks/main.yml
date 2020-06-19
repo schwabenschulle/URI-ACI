@@ -1,0 +1,28 @@
+---
+
+- name: Login ACI
+  uri:
+    url: "https://{{apic_ip}}/api/aaaLogin.json"
+    method: POST
+    body_format: json
+    validate_certs: no
+    headers:
+      Accept: 'application/json'
+    body:
+      aaaUser:
+        attributes:
+          name: "{{ username }}"
+          pwd: "{{ password }}"
+    status_code: 200
+    return_content: yes
+  register: login
+
+# this task add apic_ip and cookie to a array. if the array doesn't exist it set []
+- name: set_fabric_array
+  set_fact:
+    fabric_array: "{{ fabric_array | default([])+ [{ 'ip': apic_ip ,'cookie': login.set_cookie }] }}"
+
+
+
+
+

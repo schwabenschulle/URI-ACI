@@ -1,0 +1,28 @@
+---
+
+# create body file for troubleshooting. File doesnn't get used for deployment
+- name: create-body-file-for troubleshooting
+  template:
+    src: templates/route_uri_body.j2
+    dest: route_uri_body_{{apic_ip}}.json
+
+
+# programming of route. The body lookup render the content in jinja form yaml and covert to jSON
+- name: Add static route
+  uri:
+    url: "https://{{ apic_ip }}/api/mo/uni.json"
+    method: POST
+    body_format: json
+    validate_certs: no
+    headers:
+      Cookie: "{{ apic_cookie }}"
+      Accept: 'application/json'
+    body: '{{ (lookup("template", "templates/route_uri_body.j2") | from_yaml | to_json ) }}'
+    return_content: yes
+    status_code: [200,400]
+  register: RESULT
+
+- name: Display Error Message when deployment failed
+  debug:
+    msg="WARNING:{{ RESULT.json.imdata[0].error.attributes.text }}"
+  when: RESULT.status != 200

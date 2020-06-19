@@ -1,0 +1,220 @@
+l3extOut:
+  attributes:
+    dn: "uni/tn-CCST_P_T/out-OSPF_AREA-10.0.10.1_L3OUT"
+  children:
+  - l3extLNodeP:
+      attributes:
+        dn: "uni/tn-CCST_P_T/out-OSPF_AREA-10.0.10.1_L3OUT/lnodep-LNodeP110-111"
+      children:
+        - l3extRsNodeL3OutAtt:
+            attributes:
+              tDn: "topology/pod-1/node-110"
+            children:
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.6/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.7/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.8/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.9/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.10/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.11/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+        - l3extRsNodeL3OutAtt:
+            attributes:
+              tDn: "topology/pod-1/node-111"
+            children:
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.6/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.7/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.8/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.9/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.10/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.11/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+  - l3extLNodeP:
+      attributes:
+        dn: "uni/tn-CCST_P_T/out-OSPF_AREA-10.0.10.1_L3OUT/lnodep-LNodeP310-311"
+      children:
+        - l3extRsNodeL3OutAtt:
+            attributes:
+              tDn: "topology/pod-3/node-310"
+            children:
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.6/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.7/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.8/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.9/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.10/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.11/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+        - l3extRsNodeL3OutAtt:
+            attributes:
+              tDn: "topology/pod-3/node-311"
+            children:
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.6/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.7/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.8/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.9/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.10/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"
+            - ipRouteP:
+                attributes:
+                  ip: "6.6.6.11/32"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "1.2.3.4"

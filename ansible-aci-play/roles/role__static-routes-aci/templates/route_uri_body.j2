@@ -1,0 +1,26 @@
+l3extOut:
+  attributes:
+    dn: "{{l3out_parameter[apic_ip].l3out_dn}}"
+  children:
+{% for lnode_item in l3out_parameter[apic_ip].lnode_list %}
+  - l3extLNodeP:
+      attributes:
+        dn: "{{lnode_item['lnode'].dn}}"
+      children:
+{% for node_dn in lnode_item['lnode']['node_dn_list'] %}
+        - l3extRsNodeL3OutAtt:
+            attributes:
+              tDn: "{{ node_dn }}"
+            children:
+{% for prefix in prefixe %}
+            - ipRouteP:
+                attributes:
+                  ip: "{{ prefix }}"
+                  status: "created,modified"
+                children:
+                  - ipNexthopP:
+                      attributes:
+                        nhAddr: "{{lnode_item['lnode'].gateway}}"
+{% endfor %}
+{% endfor %}
+{% endfor %}

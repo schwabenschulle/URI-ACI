@@ -1,0 +1,38 @@
+# List of APIC controller the playbook execute for
+apic_hosts_ip:
+  - ip: "lab-fabric1.lab.net"
+  - ip: "lab-fabric2.lab.net"
+
+
+# List of L3OUT Paramater per Apric.
+l3out_parameter:
+  lab-fabric1.lab.net:
+    l3out_dn: "uni/tn-CCST_P_T/out-OSPF_AREA-10.0.10.1_L3OUT"
+    lnode_list:
+      - lnode:
+          dn: "uni/tn-CCST_P_T/out-OSPF_AREA-10.0.10.1_L3OUT/lnodep-LNodeP110-111"
+          node_dn_list:
+            - "topology/pod-1/node-110"
+            - "topology/pod-1/node-111"
+          gateway: "1.2.3.4"
+
+      - lnode:
+          dn: "uni/tn-CCST_P_T/out-OSPF_AREA-10.0.10.1_L3OUT/lnodep-LNodeP310-311"
+          node_dn_list:
+            - "topology/pod-3/node-310"
+            - "topology/pod-3/node-311"
+          gateway: "1.2.3.4"
+
+
+  lab-fabric2.lab.net:
+    l3out_dn: "uni/tn-common/out-BCN_L3OUT"
+    lnode_list:
+    - lnode:
+        dn: "uni/tn-common/out-BCN_L3OUT/lnodep-LNode-110-111"
+        node_dn_list:
+          - "topology/pod-1/node-110"
+          - "topology/pod-1/node-111"
+        gateway: "1.2.3.5"
+
+#List of Prefixe please see prefixe.yaml
+
